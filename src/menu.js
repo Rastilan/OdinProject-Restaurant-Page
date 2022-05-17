@@ -1,9 +1,7 @@
-window.Home = function() {
+window.Menu = function() {
 
-    if(document.getElementById("rest-name")){
-        return;
-    }
 
+    
     
     //Set Root of Div
     const rootDiv = document.getElementById("content");
@@ -56,41 +54,45 @@ window.Home = function() {
     centerDiv.setAttribute("id", "center");
     innercontainerDiv.insertBefore(centerDiv, innercontainerDiv.children[1]);
 
-    // INNER CONTENT
-    //rest name
-    let restNameDiv = document.createElement("div");
-    restNameDiv.setAttribute("id", "rest-name");
-    restNameDiv.innerHTML = "Café Leblanc";
-    centerDiv.insertBefore(restNameDiv, centerDiv.children[0]);
+    //menu title div
+    let menuTitleDiv = document.createElement("div");
+    menuTitleDiv.setAttribute("id", "menu-title");
+    menuTitleDiv.innerHTML = "Menu";
+    centerDiv.insertBefore(menuTitleDiv, centerDiv.children[0]);
 
-    //rest quote
-    let restQuoteDiv = document.createElement("div");
-    restQuoteDiv.setAttribute("id", "rest-quote");
-    restQuoteDiv.innerHTML = "Leblanc is a café in Yongen-Jaya owned by Sojiro Sakura, famous for its signature coffee and curry.";
-    centerDiv.insertBefore(restQuoteDiv, centerDiv.children[1]);
+    //beverage container
+    let beverageContainerDiv = document.createElement("div");
+    beverageContainerDiv.setAttribute("id", "beverage-container");
+    centerDiv.insertBefore(beverageContainerDiv, centerDiv.children[1]);
 
-    //rest hours container
-    let restHoursContainerDiv = document.createElement("div");
-    restHoursContainerDiv.setAttribute("id", "rest-hours-container");
-    centerDiv.insertBefore(restHoursContainerDiv, centerDiv.children[2]);
+    //beverage title div
+    let beverageTitleDiv = document.createElement("div");
+    beverageTitleDiv.setAttribute("id", "beverage-title");
+    beverageTitleDiv.innerHTML = "Beverages";
+    beverageContainerDiv.insertBefore(beverageTitleDiv, beverageContainerDiv.children[0]);
 
-    //rest hours title
-    let restHoursTitleDiv = document.createElement("div");
-    restHoursTitleDiv.setAttribute("id", "rest-hours-title");
-    restHoursTitleDiv.innerHTML = "Hours";
-    restHoursContainerDiv.insertBefore(restHoursTitleDiv, restHoursContainerDiv.children[0]);
+    //beverage list div
+    let beverageListDiv = document.createElement("div");
+    beverageListDiv.setAttribute("id", "beverage-list");
+    beverageListDiv.innerHTML = "Coke $1.50 <br/> Sprite $1.50 <br/> Matcha $2.00 <br/> Boba Tea $3.00<br/>";
+    beverageContainerDiv.insertBefore(beverageListDiv, beverageContainerDiv.children[1]);
 
-    //rest hours
-    let restHoursDiv = document.createElement("div");
-    restHoursDiv.setAttribute("id", "rest-hours");
-    restHoursDiv.innerHTML = "Sunday: 8am - 8pm      <br/> Monday: 6am - 6pm      <br/>Tuesday: 6am - 6pm     <br/>Wednesday: 6am - 6pm   <br/>Thursday: 6am - 10pm   <br/>Friday: 6am - 10pm     <br/> Saturday: 8am - 10pm";
-    restHoursContainerDiv.insertBefore(restHoursDiv, restHoursContainerDiv.children[1]);
+    //Food container
+    let foodContainerDiv = document.createElement("div");
+    foodContainerDiv.setAttribute("id", "food-container");
+    centerDiv.insertBefore(foodContainerDiv, centerDiv.children[2]);
 
-    let locationDiv = document.createElement("div");
-    locationDiv.setAttribute("id", "location");
-    locationDiv.innerHTML = "Yongen-Jaya";
-    centerDiv.insertBefore(locationDiv, centerDiv.children[3]);
+    //food title
+    let foodTitleDiv = document.createElement("div");
+    foodTitleDiv.setAttribute("id", "food-title");
+    foodTitleDiv.innerHTML = "Food";
+    foodContainerDiv.insertBefore(foodTitleDiv, foodContainerDiv.children[0]);
 
+    //food list
+    let foodListDiv = document.createElement('div');
+    foodListDiv.setAttribute("id", "food-list");
+    foodListDiv.innerHTML = "Burger $1.50 <br/>Pizza $2.50<br/>";
+    foodContainerDiv.insertBefore(foodListDiv, foodContainerDiv.children[1]);
 
     //right div creation
     let rightDiv = document.createElement("div");
@@ -106,6 +108,4 @@ window.Home = function() {
   
 
 }
-
-Home();
 
