@@ -57,6 +57,9 @@ window.Contact = function() {
     innercontainerDiv.insertBefore(centerDiv, innercontainerDiv.children[1]);
 
     
+    //Contact info
+    let nameDiv = document.createElement("div");
+    nameDiv.setAttribute("")
 
 
 
