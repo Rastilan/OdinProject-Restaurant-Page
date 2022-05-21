@@ -59,7 +59,10 @@ window.Contact = function() {
     
     //Contact info
     let nameDiv = document.createElement("div");
-    nameDiv.setAttribute("")
+    nameDiv.setAttribute("id", "name");
+    nameDiv.innerHTML = "Sojiro Sakura<br/>Phone Number: 555-555-5555<br/>Email: SojiroSakura@realemail.com";
+    centerDiv.insertBefore(nameDiv, centerDiv.children[0]);
+
 
 
 
